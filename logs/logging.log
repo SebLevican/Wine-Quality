@@ -1,1 +1,156 @@
 [2025-01-19 20:59:15,621: INFO: main: Welcome to the custom logging data science]
+[2025-01-20 12:02:35,890: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-01-20 12:03:57,028: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-01-20 12:03:57,038: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-01-20 12:03:57,040: INFO: common: yaml file: schema.yaml loaded successfully]
+[2025-01-20 12:03:57,042: INFO: common: created directory at: artifacts]
+[2025-01-20 12:03:57,043: INFO: common: created directory at: artifacts/data_ingestion]
+[2025-01-20 12:03:57,975: INFO: 2662890588: artifacts/data_ingestion/data.zip download! with following info: 
+Connection: close
+Content-Length: 23329
+Cache-Control: max-age=300
+Content-Security-Policy: default-src 'none'; style-src 'unsafe-inline'; sandbox
+Content-Type: application/zip
+ETag: "c69888a4ae59bc5a893392785a938ccd4937981c06ba8a9d6a21aa52b4ab5b6e"
+Strict-Transport-Security: max-age=31536000
+X-Content-Type-Options: nosniff
+X-Frame-Options: deny
+X-XSS-Protection: 1; mode=block
+X-GitHub-Request-Id: 8CB3:08D8:2A734D:3743D2:678E65DD
+Accept-Ranges: bytes
+Date: Mon, 20 Jan 2025 15:03:57 GMT
+Via: 1.1 varnish
+X-Served-By: cache-scl2220028-SCL
+X-Cache: MISS
+X-Cache-Hits: 0
+X-Timer: S1737385437.484591,VS0,VE332
+Vary: Authorization,Accept-Encoding,Origin
+Access-Control-Allow-Origin: *
+Cross-Origin-Resource-Policy: cross-origin
+X-Fastly-Request-ID: 12448feecda00516a97f87c9fb603d8a8fddb7e4
+Expires: Mon, 20 Jan 2025 15:08:57 GMT
+Source-Age: 0
+
+]
+[2025-01-20 16:33:37,367: INFO: main: Welcome to the custom logging data science]
+[2025-01-20 16:33:37,368: INFO: main: >>>> stage Data Ingestion stage started <<<<<]
+[2025-01-20 16:33:37,383: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-01-20 16:33:37,394: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-01-20 16:33:37,397: INFO: common: yaml file: schema.yaml loaded successfully]
+[2025-01-20 16:33:37,398: INFO: common: created directory at: artifacts]
+[2025-01-20 16:33:37,399: INFO: common: created directory at: artifacts/data_ingestion]
+[2025-01-20 16:33:37,400: INFO: data_ingestion: File already exists]
+[2025-01-20 16:33:37,419: INFO: main: >>>>> stage Data Ingestion stage completed
+
+x=============x]
+[2025-01-20 16:33:59,287: INFO: main: Welcome to the custom logging data science]
+[2025-01-20 16:33:59,288: INFO: main: >>>> stage Data Ingestion stage started <<<<<]
+[2025-01-20 16:33:59,289: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-01-20 16:33:59,290: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-01-20 16:33:59,291: INFO: common: yaml file: schema.yaml loaded successfully]
+[2025-01-20 16:33:59,292: INFO: common: created directory at: artifacts]
+[2025-01-20 16:33:59,294: INFO: common: created directory at: artifacts/data_ingestion]
+[2025-01-20 16:34:00,270: INFO: data_ingestion: artifacts/data_ingestion/data.zip download! with following info: 
+Connection: close
+Content-Length: 23329
+Cache-Control: max-age=300
+Content-Security-Policy: default-src 'none'; style-src 'unsafe-inline'; sandbox
+Content-Type: application/zip
+ETag: "c69888a4ae59bc5a893392785a938ccd4937981c06ba8a9d6a21aa52b4ab5b6e"
+Strict-Transport-Security: max-age=31536000
+X-Content-Type-Options: nosniff
+X-Frame-Options: deny
+X-XSS-Protection: 1; mode=block
+X-GitHub-Request-Id: 6569:123197:2E0EF:36F4E:678EA526
+Accept-Ranges: bytes
+Date: Mon, 20 Jan 2025 19:33:59 GMT
+Via: 1.1 varnish
+X-Served-By: cache-scl2220027-SCL
+X-Cache: MISS
+X-Cache-Hits: 0
+X-Timer: S1737401640.594770,VS0,VE236
+Vary: Authorization,Accept-Encoding,Origin
+Access-Control-Allow-Origin: *
+Cross-Origin-Resource-Policy: cross-origin
+X-Fastly-Request-ID: d38911988391dc0517ce3c7be473efe4afb7990e
+Expires: Mon, 20 Jan 2025 19:38:59 GMT
+Source-Age: 0
+
+]
+[2025-01-20 16:34:00,286: INFO: main: >>>>> stage Data Ingestion stage completed
+
+x=============x]
+[2025-01-21 11:10:06,485: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-01-21 11:10:06,489: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-01-21 11:10:06,497: INFO: common: yaml file: schema.yaml loaded successfully]
+[2025-01-21 11:10:06,499: INFO: common: created directory at: artifacts]
+[2025-01-21 11:10:06,500: INFO: common: created directory at: artifacts/data_validation]
+[2025-01-21 12:34:52,559: INFO: main: Welcome to the custom logging data science]
+[2025-01-21 12:34:52,559: INFO: main: >>>> stage Data Ingestion stage started <<<<<]
+[2025-01-21 12:34:52,560: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-01-21 12:34:52,561: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-01-21 12:34:52,562: INFO: common: yaml file: schema.yaml loaded successfully]
+[2025-01-21 12:34:52,563: INFO: common: created directory at: artifacts]
+[2025-01-21 12:34:52,563: ERROR: main: 'ConfigurationManager' object has no attribute 'get_data_ingestion_config']
+Traceback (most recent call last):
+  File "C:\Users\roser\OneDrive\Documentos\endto\datascienceproject\main.py", line 14, in <module>
+    data_ingestion.initiate_data_ingestion()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\roser\OneDrive\Documentos\endto\datascienceproject\src\datascience\pipeline\data_ingestion_pipeline.py", line 13, in initiate_data_ingestion
+    data_ingestion_config=config.get_data_ingestion_config()
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'ConfigurationManager' object has no attribute 'get_data_ingestion_config'. Did you mean: 'get_data_validation_config'?
+[2025-01-21 12:35:25,651: INFO: main: Welcome to the custom logging data science]
+[2025-01-21 12:35:25,651: INFO: main: >>>> stage Data Ingestion stage started <<<<<]
+[2025-01-21 12:35:25,652: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-01-21 12:35:25,653: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-01-21 12:35:25,654: INFO: common: yaml file: schema.yaml loaded successfully]
+[2025-01-21 12:35:25,660: INFO: common: created directory at: artifacts]
+[2025-01-21 12:35:25,661: INFO: common: created directory at: artifacts/data_validation]
+[2025-01-21 12:35:25,661: ERROR: main: 'DataValidationConfig' object has no attribute 'local_data_file']
+Traceback (most recent call last):
+  File "C:\Users\roser\OneDrive\Documentos\endto\datascienceproject\main.py", line 14, in <module>
+    data_ingestion.initiate_data_ingestion()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\roser\OneDrive\Documentos\endto\datascienceproject\src\datascience\pipeline\data_ingestion_pipeline.py", line 15, in initiate_data_ingestion
+    data_ingestion.download_file()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\roser\OneDrive\Documentos\endto\datascienceproject\src\datascience\components\data_ingestion.py", line 12, in download_file
+    if not os.path.exists(self.config.local_data_file):
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'DataValidationConfig' object has no attribute 'local_data_file'
+[2025-01-21 12:45:43,984: INFO: main: Welcome to the custom logging data science]
+[2025-01-21 12:45:43,985: INFO: main: >>>> stage Data Ingestion stage started <<<<<]
+[2025-01-21 12:45:43,986: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-01-21 12:45:43,987: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-01-21 12:45:43,988: INFO: common: yaml file: schema.yaml loaded successfully]
+[2025-01-21 12:45:43,988: INFO: common: created directory at: artifacts]
+[2025-01-21 12:45:43,988: ERROR: main: 'ConfigurationManager' object has no attribute 'get_data_ingestion_config']
+Traceback (most recent call last):
+  File "C:\Users\roser\OneDrive\Documentos\endto\datascienceproject\main.py", line 14, in <module>
+    data_ingestion.initiate_data_ingestion()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\roser\OneDrive\Documentos\endto\datascienceproject\src\datascience\pipeline\data_ingestion_pipeline.py", line 13, in initiate_data_ingestion
+    data_ingestion_config=config.get_data_ingestion_config()
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'ConfigurationManager' object has no attribute 'get_data_ingestion_config'. Did you mean: 'get_data_validation_config'?
+[2025-01-21 12:46:44,008: INFO: main: Welcome to the custom logging data science]
+[2025-01-21 12:46:44,008: INFO: main: >>>> stage Data Ingestion stage started <<<<<]
+[2025-01-21 12:46:44,010: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-01-21 12:46:44,010: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-01-21 12:46:44,011: INFO: common: yaml file: schema.yaml loaded successfully]
+[2025-01-21 12:46:44,012: INFO: common: created directory at: artifacts]
+[2025-01-21 12:46:44,012: INFO: common: created directory at: artifacts/data_ingestion]
+[2025-01-21 12:46:44,013: INFO: data_ingestion: File already exists]
+[2025-01-21 12:46:44,041: INFO: main: >>>>> stage Data Ingestion stage completed
+
+x=============x]
+[2025-01-21 12:46:44,041: INFO: main: >>>> stage Model Evaluation stage started <<<<<]
+[2025-01-21 12:46:44,043: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-01-21 12:46:44,043: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-01-21 12:46:44,044: INFO: common: yaml file: schema.yaml loaded successfully]
+[2025-01-21 12:46:44,045: INFO: common: created directory at: artifacts]
+[2025-01-21 12:46:44,046: INFO: common: created directory at: artifacts/data_validation]
+[2025-01-21 12:46:44,073: INFO: main: >>>>> stage Model Evaluation stage completed
+
+x=============x]
