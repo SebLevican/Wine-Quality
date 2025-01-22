@@ -18,35 +18,43 @@ def trainig():
     os.system('python main.py')
     return "Training Successful"
 
-@app.route('/predict',methods=['POST','GET']) # route from web ui
-def index():
-    if request.method =='POST':
+@app.route('/predict', methods=['POST'])
+def predict():
+    if request.method == 'POST':
         try:
-            fixed_acidity =float(request.form['fixed_acidity'])
-            volatile_acidity =float(request.form['volatile_acidity'])
-            citric_acid =float(request.form['citric_acid'])
-            residual_sugar =float(request.form['residual_sugar'])
-            chlorides =float(request.form['chlorides'])
-            free_sulfur_dioxide =float(request.form['free_sulfur_dioxide'])
-            total_sulfur_dioxide =float(request.form['total_sulfur_dioxide'])
-            density =float(request.form['density'])
-            pH =float(request.form['pH'])
-            sulphates =float(request.form['sulphates'])
-            alcohol =float(request.form['alcohol'])
+            # Recoge los datos en formato JSON
+            data = request.get_json()
 
-            data=[fixed_acidity,volatile_acidity,citric_acid,residual_sugar,chlorides,free_sulfur_dioxide,
-                 total_sulfur_dioxide,density,pH,sulphates,alcohol]
-            
-            data = np.array(data).reshape(1,11)
+            # Convierte los datos a valores flotantes
+            fixed_acidity = float(data['fixed_acidity'])
+            volatile_acidity = float(data['volatile_acidity'])
+            citric_acid = float(data['citric_acid'])
+            residual_sugar = float(data['residual_sugar'])
+            chlorides = float(data['chlorides'])
+            free_sulfur_dioxide = float(data['free_sulfur_dioxide'])
+            total_sulfur_dioxide = float(data['total_sulfur_dioxide'])
+            density = float(data['density'])
+            pH = float(data['pH'])
+            sulphates = float(data['sulphates'])
+            alcohol = float(data['alcohol'])
 
-            obj=PredictionPipeline()
-            predict=obj.predict(data)
+            # Prepara los datos para la predicción
+            input_data = np.array([fixed_acidity, volatile_acidity, citric_acid, residual_sugar, chlorides,
+                                   free_sulfur_dioxide, total_sulfur_dioxide, density, pH, sulphates, alcohol]).reshape(1, -1)
 
-            return render_template('results.html',prediction=str(predict))
+            # Realiza la predicción
+            obj = PredictionPipeline()
+            prediction = obj.predict(input_data)
+
+            rounded_prediction = round(float(prediction[0]),1)
+
+            # Devuelve la predicción como respuesta JSON
+            return {"prediction": rounded_prediction}, 200
+
         except Exception as e:
-            return "Something is wrong"
-    else:
-        return render_template('index.html')
+            # Devuelve un mensaje de error en caso de fallo
+            return {"error": "Something went wrong", "details": str(e)}, 500
+
     
 
 if __name__ =='__main__':

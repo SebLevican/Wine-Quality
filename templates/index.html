@@ -1,120 +1,190 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-      
-    </head>
-    <body>
-       
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wine Quality Prediction</title>
+  <style>
+    /* Estilos básicos */
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to right, #ff9a9e, #fad0c4);
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
 
+    .form-container {
+      background: #ffffff;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      padding: 20px 30px;
+      width: 90%;
+      max-width: 600px;
+    }
 
-        <!-- Main Content-->
-        <div class="container px-4 px-lg-5">
+    .form-container h2 {
+      text-align: center;
+      color: #333333;
+      margin-bottom: 20px;
+    }
 
-           <!DOCTYPE html>
-<html>
+    .form-row {
+      margin-bottom: 15px;
+    }
 
-<body class="form-v9">
-	<div class="page-content">
-		<div class="form-v9-content" style="background-image: url('static/assets/img/form-v9.jpg')">
-			<form class="form-detail" action="/predict" method="post">
-				<h2>Please Fill The Information</h2>
-				<div class="form-row-total">
+    .form-row label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 5px;
+      color: #555555;
+    }
 
-					<div class="form-row">
-                        <label for="fixed_acidity"> Fixed Acidity:</label>
-						<input type="text" name="fixed_acidity" id="fixed_acidity" class="input-text" placeholder="fixed_acidity" required>
-					</div>
+    .form-row input {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #cccccc;
+      border-radius: 8px;
+      font-size: 16px;
+      color: #333333;
+    }
 
-					<div class="form-row">
-                        <label for="volatile_acidity"> Volatile Acidity:</label>
-						<input type="text" name="volatile_acidity" id="volatile_acidity" class="input-text" placeholder="volatile_acidity" required>
-					</div>
+    .form-row input:focus {
+      border-color: #ff7e67;
+      outline: none;
+      box-shadow: 0 0 5px rgba(255, 126, 103, 0.5);
+    }
 
-				</div>
+    .form-row-last {
+      text-align: center;
+    }
 
+    .form-row-last input {
+      background: #ff7e67;
+      color: #ffffff;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
 
-				<div class="form-row-total">
+    .form-row-last input:hover {
+      background: #e06b5c;
+    }
 
-                    <div class="form-row">
-                        <label for="citric_acid"> Citric Acid:</label>
-						<input type="text" name="citric_acid" id="citric_acid" class="input-text" placeholder="citric_acid" required>
-					</div>
+    #result-container {
+      margin-top: 20px;
+      padding: 15px;
+      background: #f9f9f9;
+      border: 1px solid #cccccc;
+      border-radius: 8px;
+      text-align: center;
+      font-size: 18px;
+      color: #333333;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="form-container">
+    <form id="prediction-form">
+      <h2>Wine Quality Prediction</h2>
 
+      <!-- Campos del formulario -->
+      <div class="form-row">
+        <label for="fixed_acidity">Fixed Acidity:</label>
+        <input type="text" name="fixed_acidity" id="fixed_acidity" placeholder="Enter Fixed Acidity" required>
+      </div>
 
-                    <div class="form-row">
-                        <label for="residual_sugar"> Residual Sugar:</label>
-						<input type="text" name="residual_sugar" id="residual_sugar" class="input-text" placeholder="residual_sugar" required>
-					</div>
+      <div class="form-row">
+        <label for="volatile_acidity">Volatile Acidity:</label>
+        <input type="text" name="volatile_acidity" id="volatile_acidity" placeholder="Enter Volatile Acidity" required>
+      </div>
 
-				</div>
+      <div class="form-row">
+        <label for="citric_acid">Citric Acid:</label>
+        <input type="text" name="citric_acid" id="citric_acid" placeholder="Enter Citric Acid" required>
+      </div>
 
+      <div class="form-row">
+        <label for="residual_sugar">Residual Sugar:</label>
+        <input type="text" name="residual_sugar" id="residual_sugar" placeholder="Enter Residual Sugar" required>
+      </div>
 
-                <div class="form-row-total">
+      <div class="form-row">
+        <label for="chlorides">Chlorides:</label>
+        <input type="text" name="chlorides" id="chlorides" placeholder="Enter Chlorides" required>
+      </div>
 
-                    <div class="form-row">
-                        <label for="chlorides"> Chlorides:</label>
-						<input type="text" name="chlorides" id="chlorides" class="input-text" placeholder="chlorides" required>
-					</div>
+      <div class="form-row">
+        <label for="free_sulfur_dioxide">Free Sulfur Dioxide:</label>
+        <input type="text" name="free_sulfur_dioxide" id="free_sulfur_dioxide" placeholder="Enter Free Sulfur Dioxide" required>
+      </div>
 
-                    <div class="form-row">
-                        <label for="free_sulfur_dioxide"> Free Sulfur Dioxide:</label>
-						<input type="text" name="free_sulfur_dioxide" id="free_sulfur_dioxide" class="input-text" placeholder="free_sulfur_dioxide" required>
-					</div>
+      <div class="form-row">
+        <label for="total_sulfur_dioxide">Total Sulfur Dioxide:</label>
+        <input type="text" name="total_sulfur_dioxide" id="total_sulfur_dioxide" placeholder="Enter Total Sulfur Dioxide" required>
+      </div>
 
-				</div>
+      <div class="form-row">
+        <label for="density">Density:</label>
+        <input type="text" name="density" id="density" placeholder="Enter Density" required>
+      </div>
 
+      <div class="form-row">
+        <label for="pH">pH:</label>
+        <input type="text" name="pH" id="pH" placeholder="Enter pH" required>
+      </div>
 
-                <div class="form-row-total">
+      <div class="form-row">
+        <label for="sulphates">Sulphates:</label>
+        <input type="text" name="sulphates" id="sulphates" placeholder="Enter Sulphates" required>
+      </div>
 
-                    <div class="form-row">
-                        <label for="total_sulfur_dioxide"> Total Sulfur Dioxide:</label>
-						<input type="text" name="total_sulfur_dioxide" id="total_sulfur_dioxide" class="input-text" placeholder="total_sulfur_dioxide" required>
-					</div>
+      <div class="form-row">
+        <label for="alcohol">Alcohol:</label>
+        <input type="text" name="alcohol" id="alcohol" placeholder="Enter Alcohol" required>
+      </div>
 
-                    <div class="form-row">
-                        <label for="density"> Density:</label>
-						<input type="text" name="density" id="density" class="input-text" placeholder="density" required>
-					</div>
+      <div class="form-row-last">
+        <input type="submit" value="Predict">
+      </div>
+    </form>
 
-				</div>
+    <div id="result-container">Wine Quality: <span id="result"></span></div>
+  </div>
 
+  <script>
+    document.getElementById('prediction-form').addEventListener('submit', async function(event) {
+      event.preventDefault(); // Evita la recarga de la página
 
-                <div class="form-row-total">
+      const formData = new FormData(this); // Obtén los datos del formulario
+      const data = Object.fromEntries(formData.entries()); // Convierte a JSON
 
-                    <div class="form-row">
-                        <label for="pH"> pH:</label>
-						<input type="text" name="pH" id="pH" class="input-text" placeholder="pH" required>
-					</div>
+      try {
+        const response = await fetch('/predict', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(data)
+        });
 
-                    <div class="form-row">
-                        <label for="sulphates"> Sulphates:</label>
-						<input type="text" name="sulphates" id="sulphates" class="input-text" placeholder="sulphates" required>
-					</div>
-
-				</div>
-
-
-                <div class="form-row-total">
-
-                    <div class="form-row">
-                        <label for="alcohol"> Alcohol:</label>
-						<input type="text" name="alcohol" id="alcohol" class="input-text" placeholder="alcohol" required>
-					</div>
-
-
-				</div>
-
-
-				<div class="form-row-last">
-					<input type="submit" name="register" class="register" value="Predict">
-				</div>
-			</form>
-		</div>
-	</div>
-</body><!-- This templates was made by Colorlib (https://colorlib.com) -->
+        if (response.ok) {
+          const result = await response.json();
+          document.getElementById('result').textContent = result.prediction; // Muestra la predicción
+          document.getElementById('result-container').style.display = 'block'; // Muestra el contenedor del resultado
+        } else {
+          alert('Error: Unable to get prediction.');
+        }
+      } catch (error) {
+        console.error('Error:', error);
+        alert('Something went wrong. Please try again.');
+      }
+    });
+  </script>
+</body>
 </html>
-
-        
-
-
-       

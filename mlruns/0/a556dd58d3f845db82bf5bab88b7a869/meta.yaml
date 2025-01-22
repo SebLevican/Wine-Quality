@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/roser/OneDrive/Documentos/endto/datascienceproject/mlruns/0/a556dd58d3f845db82bf5bab88b7a869/artifacts
+end_time: 1737557523374
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: a556dd58d3f845db82bf5bab88b7a869
+run_name: painted-whale-468
+run_uuid: a556dd58d3f845db82bf5bab88b7a869
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1737557517128
+status: 3
+tags: []
+user_id: roser
