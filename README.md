@@ -35,7 +35,7 @@ The dataset used in this project is the **Wine Quality dataset**, which contains
 - NumPy
 - Matplotlib
 - Seaborn
-- Scikit-learn (if applicable)
+- Scikit-learn
 
 ## 🚀 How to Use
 
