@@ -42,3 +42,7 @@ The dataset used in this project is the **Wine Quality dataset**, which contains
 1. Clone this repository:
    ```bash
    git clone https://github.com/SebLevican/Wine-Quality.git
+
+   create venv
+   install requirements
+   run main.py then app.py
